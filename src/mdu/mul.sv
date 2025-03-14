@@ -65,8 +65,8 @@ module mul #(parameter XLEN) (
       PP4E = {1'b1, MP, {(XLEN-3){1'b0}}, 1'b1, {(XLEN){1'b0}}};
     end
     else if (MULHSU) begin
-      PP2E = {2'b00, PA, {(XLEN-1){1'b0}}};
-      PP3E = {2'b00, ~PB, {(XLEN-1){1'b0}}};
+      PP2E = {2'b00, ~PA, {(XLEN-1){1'b0}}};
+      PP3E = {2'b00, PB, {(XLEN-1){1'b0}}};
       PP4E = {1'b1, ~MP, {(XLEN-2){1'b0}}, 1'b1, {(XLEN-1){1'b0}}};
     end
     else begin
